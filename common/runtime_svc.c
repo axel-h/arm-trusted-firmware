@@ -107,6 +107,7 @@ void runtime_svc_init(void)
 	rt_svc_descs = (rt_svc_desc_t *) RT_SVC_DESCS_START;
 	for (index = 0; index < RT_SVC_DECS_NUM; index++) {
 		rt_svc_desc_t *service = &rt_svc_descs[index];
+		NOTICE("initializing runtime service %d/%ld: %s\n",index+1, RT_SVC_DECS_NUM, service->name);
 
 		/*
 		 * An invalid descriptor is an error condition since it is
